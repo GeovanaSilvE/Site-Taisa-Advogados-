@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taisa Abreu Advogados</title>
+    <link rel="icon" href="./img/favicon_final.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon_final.ico" type="image/x-icon">
+
+    <meta name="description"
+        content="Escritório Taisa Abreu Advogados — especialistas em Direito Previdenciário, Civil, Família e Trabalhista." />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- ======================
+       BLOC 1: CONTEÚDO ORIGINAL
+       ====================== -->
+    <div class="wrapper">
+        <!-- ======= HEADER ======= -->
+        <header class="main-header">
+            <div class="container header-inner">
+                <!-- Logo + texto -->
+                <div class="logo-area">
+                    <img src="./img/logoTaisa.png" alt="Logotipo Taisa Abreu Advogados" class="logo-img" />
+                    <div class="logo-texto">
+                        <p class="logo-text1">Taisa Abreu</p>
+                        <p class="logo-text2">Advogados</p>
+                    </div>
+                </div>
+
+                <!-- Menu principal com ícone de lupa -->
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#historia">Sobre</a></li>
+                        <li><a href="#blog">Artigo</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Botão hamburger (mobile) -->
+                <button class="hamburguer" id="menu-toggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const toggle = document.getElementById('menu-toggle');
+                const nav = document.querySelector('.nav-menu');
+                if (toggle && nav) {
+                    toggle.addEventListener('click', () => {
+                        nav.classList.toggle('open');
+                    });
+                } else {
+                    console.error('Botão toggle ou nav-menu não encontrado.');
+                }
+            });
+        </script>
+
+
+        <!-- ======= MAIN CONTENT ======= -->
+        <main>
+            <!-- ======= BANNER / HERO ======= -->
+            <section id="home" class="banner">
+                <div class="banner-overlay">
+                    <img src="./img/imagemFundo.jpeg" alt="" aria-hidden="true" class="banner-img" />
+                </div>
+                <div class="banner-conteudo container">
+                    <small class="banner-subtitulo">Seja bem-vindo(a)</small>
+                    <h1 class="banner-titulo">TAISA ABREU ADVOGADOS</h1>
+                    <p class="banner-texto">
+                        Há mais de uma década, o escritório Taisa Abreu Advogados atua com
+                        excelência na defesa dos direitos previdenciários, oferecendo soluções
+                        rápidas e suporte completo do início ao fim do processo.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ======= SERVIÇOS / ÁREAS DE ATUAÇÃO ======= -->
+            <section id="servicos" class="area-atuacao">
+                <div class="area-atuacao-container">
+                    <h2 class="areas-titulo">Conheça nossas áreas de atuação</h2>
+
+                    <div class="areas-botoes">
+                        <a class="area-btn" href="#inss">Benefícios do INSS</a>
+                        <a class="area-btn" href="#civil">Civil</a>
+                        <a class="area-btn" href="#familia">Família</a>
+                        <a class="area-btn" href="#trabalhista">Trabalhista</a>
+                        <a class="area-btn" href="#empresarial">Empresarial</a>
+                        <a class="area-btn" href="#tributario">Tributário</a>
+                        <a class="area-btn" href="#consumidor">Consumidor</a>
+                    </div>
+
+                    <div class="areas-descricao">
+                        <h3 class="areas-subtitulo">Atuamos em todo Brasil</h3>
+                        <p class="areas-texto">
+                            Transformando desafios jurídicos complexos em soluções eficazes e
+                            personalizadas
+                        </p>
+                    </div>
+
+                    <div class="botao-contato-servico">
+                        <a href="https://wa.me/5561999230382?text=Olá%2C+gostaria+de+mais+informações+sobre+os+serviços."
+                            target="_blank" class="btn-zap">
+                            <i class="fab fa-whatsapp"></i> Entre em contato</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ======= NOSSA HISTÓRIA ======= -->
+            <section id="historia" class="historia">
+                <div class="historia-container container">
+                    <div class="historia-texto">
+                        <small class="historia-subtitulo">Conheça a nossa história</small>
+                        <h2 class="historia-titulo">Taisa Abreu Advogados</h2>
+                        <p class="historia-paragrafo">
+                            Fundado com o objetivo de oferecer serviços jurídicos de excelência, nosso escritório de
+                            advocacia alia seriedade, competência, compromisso com prazos, empatia e confiança para
+                            atender às necessidades de nossos clientes. Com atuação nas áreas do direito civil, penal,
+                            trabalhista, empresarial, imobiliário, da familia, tributário, do consumidor e
+                            previdenciário, somos guiados pela busca constante por soluções inovadoras e eficazes,
+                            valorizando a ética e a transparência em todas as nossas ações.
+                        </p>
+
+                        <p class="historia-paragrafo">
+                            Sediado na cidade de Formosa desde 2015 e atuando na(s) cidade(s) Formosa, Entorno de
+                            Formosa, Brasilia - DF, Unaí - MG, Buritis - MG, Maringá - PR, Florianópolis - SC, nosso
+                            escritório conta com a expertise da sócia Taisa Abreu, além de uma equipe de advogados
+                            altamente qualificados e dedicados a enfrentar os mais diversos desafios jurídicos. Juntos,
+                            compartilhamos a visão de um atendimento personalizado, pautado na empatia e na compreensão
+                            das particularidades de cada caso.
+                        </p>
+
+                        <p class="historia-paragrafo">
+                            Nosso compromisso com prazos é uma das características que nos diferencia no mercado, pois
+                            entendemos que o tempo é um fator crucial para o sucesso de nossos clientes. A confiança é a
+                            base para o estabelecimento de relações duradouras e, por isso, prezamos pela integridade e
+                            sigilo das informações compartilhadas conosco. Convidamos você a conhecer nosso escritório e
+                            nossa equipe, e a descobrir como podemos auxiliar na resolução de suas demandas jurídicas.
+                        </p>
+                    </div>
+
+                    <figure class="historia-video">
+                        <video autoplay loop muted playsinline class="video-celular">
+                            <source src="./video/historia.mp4" type="video/mp4" />
+                            Seu navegador não suporta vídeos HTML5.
+                        </video>
+                        <figcaption class="historia-legenda">Dra. Taisa Abreu</figcaption>
+                    </figure>
+
+
+                </div>
+            </section>
+
+            <!-- ======= REDES SOCIAIS / CARROSSEL INSTAGRAM ======= -->
+            <section class="redes-sociais">
+                <div class="container">
+                    <h2 class="redes-title">NOSSAS REDES</h2>
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/C9APkaWRDaQ/?img_index=1" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Ver publicação no Instagram 1">
+                                    <img src="./img/insta01.jpg" alt="Post Instagram 1">
+                                </a>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/C9KekKguEOD/?img_index=1" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Ver publicação no Instagram 2">
+                                    <img src="./img/insta02.jpg" alt="Post Instagram 2">
+                                </a>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/DNTzd8tBx0c/?img_index=1" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Ver publicação no Instagram 3">
+                                    <img src="./img/insta03.jpg" alt="Post Instagram 3">
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- Setas -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Swiper.js no final do body -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script src="scripts.js"></script>
+
+
+            <!-- ======= ARTIGOS ======= -->
+            <section id="blog" class="artigos">
+                <div class="container">
+                    <h2 class="artigos-title">Artigos</h2>
+                    <div class="artigos-grid">
+
+                        <article class="artigo-card">
+                            <img src="./img/img1.jpg" alt="Aposentadoria por Idade e Regras de Transição"
+                                class="artigo-img" />
+                            <h3 class="artigo-titulo">Aposentadoria por Idade, Tempo de Contribuição e Regras de
+                                Transição</h3>
+                            <a href="artigos/artigo01.html"></a>
+                        </article>
+
+                        <article class="artigo-card">
+                            <img src="./img/img2.jpg" alt="Aposentadoria Especial, Rural e Híbrida"
+                                class="artigo-img" />
+                            <h3 class="artigo-titulo">Aposentadoria Especial, Rural e Híbrida: entre a enxada, a cidade
+                                e o direito</h3>
+                            <a href="artigos/artigo02.html"></a>
+                        </article>
+
+                        <article class="artigo-card">
+                            <img src="./img/img2.jpg" alt="Benefícios do INSS" class="artigo-img" />
+                            <h3 class="artigo-titulo">Benefícios do INSS: amparo nos diferentes ciclos da vida</h3>
+                            <a href="artigos/artigo03.html"></a>
+                        </article>
+
+                    </div>
+
+                    <div class="ver-mais-container">
+                        <a href="artigos/artigos.html" class="btn-ver-mais">Ver mais artigos</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ======= AVALIAÇÕES ======= -->
+            <section class="avaliacoes">
+                <div class="container">
+                    <h2 class="avaliacoes-title">O que dizem nossos clientes</h2>
+                    <div class="swiper-avaliacoes">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/avaliacao01.jpg" alt="Avaliação 1"></div>
+                            <div class="swiper-slide"><img src="./img/avaliacao02.jpg" alt="Avaliação 2"></div>
+                            <div class="swiper-slide"><img src="./img/avaliacao03.jpg" alt="Avaliação 3"></div>
+                            <div class="swiper-slide"><img src="./img/avaliacao04.jpg" alt="Avaliação 4"></div>
+                            <div class="swiper-slide"><img src="./img/avaliacao05.jpg" alt="Avaliação 5"></div>
+                            <div class="swiper-slide"><img src="./img/avaliacao06.jpg" alt="Avaliação 6"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Swiper JS -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script>
+                const swiper = new Swiper('.swiper-avaliacoes', {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    spaceBetween: 30,
+                    speed: 8000,
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false,
+                    },
+                    allowTouchMove: false,
+                    freeMode: false,
+                    freeModeMomentum: false,
+                });
+            </script>
+
+
+            <!-- ======= CONTATO ======= -->
+            <section id="contato" class="contato">
+                <div class="container contato__container">
+                    <h2 class="contato__title">ENTRE EM CONTATO</h2>
+                    <p class="contato__text">Preencha o formulário abaixo para receber o contato de um especialista:</p>
+
+                    <!-- FORMULÁRIO -->
+                    <form action="https://formsubmit.co/taisa.abreuadv@gmail.com" method="POST"
+                        class="form contato__form">
+
+                        <!-- Nome -->
+                        <div class="form__group">
+                            <input type="text" name="nome" placeholder="Nome" required />
+                        </div>
+
+                        <!-- E-mail -->
+                        <div class="form__group">
+                            <input type="email" name="email" placeholder="E-mail" required />
+                        </div>
+
+                        <!-- Telefone -->
+                        <div class="form__group">
+                            <input type="tel" name="telefone" placeholder="Telefone" required />
+                        </div>
+
+                        <!-- Endereço -->
+                        <div class="form__group">
+                            <input type="text" name="endereco" placeholder="Endereço" required />
+                        </div>
+
+                        <!-- Especialidade -->
+                        <div class="form__group especialidade">
+                            <select name="especialidade" required>
+                                <option value="">Especialidade</option>
+                                <option value="Benefícios do INSS">Benefícios do INSS</option>
+                                <option value="Civil">Civil</option>
+                                <option value="Família">Família</option>
+                                <option value="Trabalhista">Trabalhista</option>
+                                <option value="Empresarial">Empresarial</option>
+                                <option value="Tributário">Tributário</option>
+                                <option value="Consumidor">Consumidor</option>
+                                <option value="Outro assunto">Outro assunto</option>
+                            </select>
+                        </div>
+
+                        <!-- Mensagem -->
+                        <div class="form__group form__group_mens">
+                            <textarea name="mensagem" placeholder="Mensagem"></textarea>
+                        </div>
+
+                        <!-- Campos ocultos de configuração -->
+                        <input type="hidden" name="_subject" value="Novo contato do site!" />
+                        <input type="hidden" name="_next" value="https://taisadvogados.com.br/obrigado.html" />
+                        <input type="hidden" name="_captcha" value="false" />
+
+                        <!-- Botão -->
+                        <button type="submit" class="form__btn">Enviar</button>
+                    </form>
+                </div>
+            </section>
+
+
+            <!-- ======= BORDA/DIVISÓRIA + 1º FOOTER ======= -->
+            <footer class="site-footer page2-footer">
+                <div class="footer-container container">
+
+                    <div class="footer-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <p><a href="mailto:taisa.abreuadv@gmail.com">taisa.abreuadv@gmail.com</a></p>
+                    </div>
+
+                    <div class="footer-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <address>
+                            Rua Olímpio Jacinto, Nº 980, Edifício Santana, 1º Piso<br />
+                            Sala 105, Formosa, Goiás, 73802-040
+                        </address>
+                    </div>
+
+                    <div class="footer-item">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <p><a href="tel:+5561999230382">(61)99923-0382</a></p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- ======= SEÇÃO “ÁREAS ESPECIALIZADAS” COM DIVISÓRIA NO TOPO ======= -->
+            <section id="especialidades" class="especialidades">
+                <div class="area_container">
+                    <!-- ======= PREVIDENCIÁRIO ======= -->
+                    <section id="inss" class="area-especializada previdenciario">
+                        <h2 class="area-titulo-small">SOMOS ESPECIALISTAS</h2>
+                        <h3 class="area-titulo-large">PREVIDENCIÁRIO</h3>
+                        <div class="area-conteudo flex-row">
+                            <div class="area-texto">
+                                <p>
+                                    O Direito Previdenciário trata das normas e princípios que regulam a
+                                    Previdência Social, garantindo a proteção aos segurados e seus dependentes
+                                    em situações como aposentadoria, auxílio-doença, pensão por morte, entre outros.
+                                    Nossa equipe de advogados especializados em Direito Previdenciário atua na
+                                    orientação, planejamento e acompanhamento de processos previdenciários,
+                                    buscando a garantia dos direitos e benefícios aos quais nossos clientes têm
+                                    direito.
+                                </p>
+                                <p>
+                                    Compreendemos a importância da segurança e do bem-estar no momento da
+                                    aposentadoria e nos casos de necessidade de benefícios previdenciários. Por
+                                    isso, nossa equipe se dedica a oferecer um atendimento personalizado e eficiente,
+                                    orientando nossos clientes em todas as etapas do processo previdenciário e buscando
+                                    as melhores soluções jurídicas para cada caso.
+                                </p>
+                                <p>
+                                    Além disso, nossos advogados estão sempre atualizados sobre as mudanças na
+                                    legislação e na jurisprudência previdenciária, o que nos permite desenvolver
+                                    estratégias eficientes e alinhadas com os mais recentes entendimentos dos
+                                    tribunais. Nossa abordagem ética e profissional busca assegurar a
+                                    preservação dos direitos e garantias dos envolvidos nas relações previdenciárias.
+                                </p>
+                            </div>
+                            <div class="area-imagem">
+                                <img src="./img/previdenciario.jpg" class="img_previdenciario"
+                                    alt="Atendimento Previdenciário" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ======= CIVIL ======= -->
+                    <section id="civil" class="area-especializada civil">
+                        <h2 class="area-titulo-small">SOMOS ESPECIALISTAS</h2>
+                        <h3 class="area-titulo-large">CIVIL</h3>
+                        <div class="area-conteudo flex-row-reverse">
+                            <div class="area-texto">
+                                <p>
+                                    O Direito Civil é uma área abrangente que regula as relações jurídicas entre
+                                    pessoas físicas e jurídicas, envolvendo questões relacionadas a obrigações,
+                                    contratos, direitos de família, sucessões, bens e responsabilidades. Nossa equipe
+                                    de advogados especializados em Direito Civil atua em casos de elaboração e
+                                    revisão de contratos, cobrança de dívidas, indenizações, partilha de bens,
+                                    divórcios e guarda de filhos, entre outros.
+                                </p>
+                                <p>
+                                    Nosso objetivo é oferecer um atendimento personalizado e eficiente, garantindo
+                                    os direitos e interesses de nossos clientes. Estamos sempre atualizados quanto
+                                    às mudanças na legislação e na jurisprudência, o que nos permite oferecer
+                                    soluções jurídicas eficazes e alinhadas com os mais recentes entendimentos dos
+                                    tribunais.
+                                </p>
+                                <p>
+                                    Entendemos que cada caso é único e demanda uma abordagem diferenciada. Por isso,
+                                    priorizamos a comunicação clara e transparente com nossos clientes,
+                                    compreendendo suas necessidades e oferecendo orientações jurídicas precisas e
+                                    adequadas a cada situação.
+                                </p>
+                            </div>
+                            <div class="area-imagem">
+                                <img src="./img/civil.jpg" class="img_civil" alt="Assessoria em Direito Civil" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ======= FAMÍLIA ======= -->
+                    <section id="familia" class="area-especializada familia">
+                        <h2 class="area-titulo-small">SOMOS ESPECIALISTAS</h2>
+                        <h3 class="area-titulo-large">FAMÍLIA</h3>
+                        <div class="area-conteudo flex-row">
+                            <div class="area-texto">
+                                <p>
+                                    O Direito de Família aborda questões relacionadas a casamento, união estável,
+                                    divórcio, guarda de filhos, pensão alimentícia, partilha de bens e inventários.
+                                    Nossos advogados atuam com sensibilidade e discrição para auxiliar nossos
+                                    clientes nos momentos de transformação familiar, buscando soluções justas e
+                                    equilibradas para todas as partes envolvidas.
+                                </p>
+                                <p>
+                                    Sabemos que questões familiares e sucessórias podem ser emocionalmente
+                                    desgastantes. Por isso, nossa equipe se dedica a oferecer um atendimento
+                                    acolhedor e compreensivo, orientando nossos clientes em todas as etapas do
+                                    processo, desde a elaboração de acordos até a resolução de conflitos em
+                                    sede judicial ou extrajudicial.
+                                </p>
+                                <p>
+                                    Além disso, estamos em constante atualização sobre as mudanças na legislação
+                                    e na jurisprudência, o que nos permite encontrar soluções jurídicas
+                                    eficientes e adequadas às necessidades de cada cliente, sempre pautadas no
+                                    respeito aos direitos e interesses dos envolvidos.
+                                </p>
+                            </div>
+                            <div class="area-imagem">
+                                <img src="./img/familia.jpg" class="img_familia"
+                                    alt="Orientação em Direito de Família" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ======= TRABALHISTA ======= -->
+                    <section id="trabalhista" class="area-especializada trabalhista">
+                        <h2 class="area-titulo-small">SOMOS ESPECIALISTAS</h2>
+                        <h3 class="area-titulo-large">TRABALHISTA</h3>
+                        <div class="area-conteudo flex-row-reverse">
+                            <div class="area-texto">
+                                <p>
+                                    O Direito Trabalhista regula as relações entre empregados e empregadores,
+                                    garantindo a observância das normas trabalhistas e a proteção dos direitos dos
+                                    trabalhadores. Nossa equipe de advogados especializados em Direito Trabalhista
+                                    atua tanto na defesa dos direitos dos trabalhadores quanto na consultoria
+                                    empresarial, representando nossos clientes em processos trabalhistas, como
+                                    reclamações trabalhistas, ações de indenização e questões sindicais.
+                                </p>
+                                <p>
+                                    Compreendemos a importância de um ambiente de trabalho justo e equilibrado para
+                                    o sucesso dos negócios e a satisfação dos trabalhadores. Por isso, nossa equipe
+                                    trabalha incansavelmente para garantir o cumprimento das normas trabalhistas e
+                                    a proteção dos direitos de nossos clientes, seja na defesa dos trabalhadores
+                                    ou na assessoria jurídica às empresas.
+                                </p>
+                                <p>
+                                    Além disso, nossos advogados estão sempre atualizados sobre as mudanças na
+                                    legislação e na jurisprudência trabalhista, o que nos permite desenvolver
+                                    estratégias eficientes e alinhadas com os mais recentes entendimentos dos
+                                    tribunais. Nossa abordagem ética e profissional busca assegurar a preservação
+                                    dos direitos e garantias dos envolvidos nas relações de trabalho.
+                                </p>
+                            </div>
+                            <div class="area-imagem">
+                                <img src="./img/trabalhista.jpg" class="img_trabalhista"
+                                    alt="Consultoria Trabalhista" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ======= EMPRESARIAL ======= -->
+                    <section id="empresarial" class="area-especializada empresarial">
+                        <h2 class="area-titulo-small">SOMOS ESPECIALISTAS</h2>
+                        <h3 class="area-titulo-large">EMPRESARIAL</h3>
+                        <div class="area-conteudo flex-row">
+                            <div class="area-texto">
+                                <p>
+                                    O Direito Empresarial engloba as normas e princípios que regulam a atividade
+                                    empresarial, abordando questões como constituição e dissolução de sociedades,
+                                    contratos empresariais, falências, recuperação de empresas e propriedade
+                                    intelectual. Nossa equipe de advogados especializados em Direito Empresarial
+                                    oferece consultoria jurídica e representação contenciosa para empresas de
+                                    diversos setores, auxiliando na resolução de conflitos e na prevenção de riscos
+                                    jurídicos.
+                                </p>
+                                <p>
+                                    Entendemos que o ambiente empresarial é dinâmico e desafiador, exigindo soluções
+                                    jurídicas eficientes e adaptadas às necessidades de cada negócio. Por isso,
+                                    nossa equipe trabalha em parceria com nossos clientes, oferecendo orientações
+                                    claras e estratégias que contribuam para o crescimento e a sustentabilidade de
+                                    suas atividades empresariais.
+                                </p>
+                                <p>
+                                    Além disso, nossos advogados estão sempre atualizados sobre as mudanças na
+                                    legislação e na jurisprudência empresarial, o que nos permite encontrar
+                                    soluções inovadoras e alinhadas com os mais recentes entendimentos dos
+                                    tribunais. Nossa abordagem ética e profissional busca assegurar a preservação
+                                    dos direitos e interesses envolvidos nas relações empresariais.
+                                </p>
+                            </div>
+                            <div class="area-imagem">
+                                <img src="./img/empresarial.jpg" class="img_empresarial" alt="Assessoria Empresarial" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ======= TRIBUTÁRIO ======= -->
+                    <section id="tributario" class="area-especializada tributario">
+                        <h2 class="area-titulo-small">SOMOS ESPECIALISTAS</h2>
+                        <h3 class="area-titulo-large">TRIBUTÁRIO</h3>
+                        <div class="area-conteudo flex-row-reverse">
+                            <div class="area-texto">
+                                <p>
+                                    O Direito Tributário trata das relações entre o Estado e os contribuintes,
+                                    estabelecendo normas e princípios para a instituição, fiscalização e arrecadação
+                                    de tributos. Nossa equipe de advogados especializados em Direito Tributário atua
+                                    na consultoria e no contencioso, assessorando nossos clientes em questões fiscais,
+                                    como planejamento tributário, compensação de tributos, defesa em autos de infração
+                                    e execuções fiscais.
+                                </p>
+                                <p>
+                                    Entendemos a complexidade do sistema tributário brasileiro e a importância de uma
+                                    gestão tributária eficiente para o sucesso dos negócios de nossos clientes. Por
+                                    isso, nosso escritório se dedica a encontrar soluções jurídicas personalizadas
+                                    e alinhadas com as particularidades de cada cliente, visando a redução da carga
+                                    tributária e a conformidade com a legislação fiscal.
+                                </p>
+                                <p>
+                                    Nosso compromisso é prestar um serviço de qualidade, pautado na ética e na
+                                    transparência, auxiliando nossos clientes na resolução de conflitos tributários
+                                    e na prevenção de futuros litígios, sempre em busca da segurança jurídica e da
+                                    preservação dos direitos e interesses dos contribuintes.
+                                </p>
+                            </div>
+                            <div class="area-imagem">
+                                <img src="./img/tributario.jpg" class="img_tributario" alt="Consultoria Tributária" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ======= CONSUMIDOR ======= -->
+                    <section id="consumidor" class="area-especializada consumidor">
+                        <h2 class="area-titulo-small">SOMOS ESPECIALISTAS</h2>
+                        <h3 class="area-titulo-large">CONSUMIDOR</h3>
+                        <div class="area-conteudo flex-row">
+                            <div class="area-texto">
+                                <p>
+                                    O Direito do Consumidor visa proteger os direitos e interesses dos
+                                    consumidores, garantindo a observância das normas de proteção e defesa do
+                                    consumidor nas relações de consumo. Nossa equipe de advogados especializados em
+                                    Direito do Consumidor atua na defesa dos direitos dos consumidores e na
+                                    assessoria jurídica a fornecedores, representando nossos clientes em processos
+                                    relacionados a práticas comerciais abusivas, responsabilidade civil, vícios de
+                                    produtos e serviços, entre outros.
+                                </p>
+                                <p>
+                                    Compreendemos a importância de relações de consumo justas e equilibradas para a
+                                    satisfação dos consumidores e o sucesso dos fornecedores. Por isso, nossa equipe
+                                    trabalha incansavelmente para garantir o cumprimento das normas consumeristas
+                                    e a proteção dos direitos de nossos clientes, seja na defesa dos consumidores
+                                    ou na assessoria jurídica a fornecedores.
+                                </p>
+                                <p>
+                                    Além disso, nossos advogados estão sempre atualizados sobre as mudanças na
+                                    legislação e na jurisprudência relacionada ao Direito do Consumidor, o que nos
+                                    permite desenvolver estratégias eficientes e alinhadas com os mais recentes
+                                    entendimentos dos tribunais. Nossa abordagem ética e profissional busca assegurar
+                                    a preservação dos direitos e garantias dos envolvidos nas relações de consumo.
+                                </p>
+                            </div>
+                            <div class="area-imagem">
+                                <img src="./img/consumidor.jpg" class="img_consumidor" alt="Assessoria ao Consumidor" />
+                            </div>
+                        </div>
+                    </section>
+                </div><!-- /container -->
+            </section>
+
+            <!-- ======= 2º FOOTER ======= -->
+            <footer class="site-footer page2-footer">
+                <div class="footer-container container">
+
+                    <div class="footer-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <p><a href="mailto:taisa.abreuadv@gmail.com">taisa.abreuadv@gmail.com</a></p>
+                    </div>
+
+                    <div class="footer-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <address>
+                            Rua Olímpio Jacinto, Nº 980, Edifício Santana, 1º Piso<br />
+                            Sala 105, Formosa, Goiás, 73802-040
+                        </address>
+                        <p class="oab-info">OAB: 42335</p>
+                    </div>
+
+                    <div class="footer-item">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <p><a href="tel:+5561999230382">(61)99923-0382</a></p>
+                    </div>
+                </div>
+
+                <div class="duas-logos">
+                    <img src="./img/assinaturaGi.jpg" alt="Logo 1" class="assinatura1" />
+                    <img src="./img/assinaturaGe.jpg" alt="Logo 2" class="assinatura2" />
+                </div>
+
+            </footer>
+
+            <!-- ========== ASSISTENTE VIRTUAL ========== -->
+            <div id="chat-floating-message">Olá! Posso te ajudar?</div>
+            <div id="chat-icon">💬</div>
+
+            <div id="chat-window" class="hidden">
+                <div id="chat-header">
+                    <div>
+                        <strong>Assistente Virtual</strong><br>
+                        <small>● Online</small>
+                    </div>
+                    <button id="close-chat" type="button">×</button>
+                </div>
+
+                <div id="chat-body">
+                    <div class="message bot">Olá! Sou a assistente virtual da Taisa Abreu Advogados. Como posso te
+                        ajudar hoje?</div>
+                </div>
+
+                <div id="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Digite sua mensagem..." />
+                    <button id="send-btn">Enviar</button>
+                </div>
+            </div>
+            <script src="scripts.js"></script>
+</body>
+
+</html>
