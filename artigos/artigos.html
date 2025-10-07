@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artigos | Taisa Abreu Advogados</title>
+  <meta name="description" content="Artigos jurídicos sobre aposentadoria, pensão, auxílio e muito mais.">
+
+  <link rel="icon" href="../img/favicon_final.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../img/favicon_final.ico" type="image/x-icon">
+
+  <!-- CSS principal (subindo 1 nível) -->
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Fontes e ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- ======= HEADER ======= -->
+    <header class="main-header-artigo">
+      <div class="container header-inner">
+        <div class="logo-area">
+          <img src="../img/logoTaisa.png" alt="Logotipo Taisa Abreu Advogados" class="logo-img" />
+          <div class="logo-texto">
+            <p class="logo-text1">Taisa Abreu</p>
+            <p class="logo-text2">Advogados</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======= CONTEÚDO PRINCIPAL ======= -->
+    <main class="container artigos-container">
+
+      <!-- BOTÃO/VOLTAR PARA HOME + PESQUISA -->
+      <section class="bloco-pesquisa">
+        <div class="voltar-home-esquerda">
+          <a href="../index.html">&larr; Página Principal</a>
+        </div>
+
+        <div class="busca-banner">
+          <input type="text" id="campo-pesquisa" placeholder="Buscar artigo por título...">
+        </div>
+      </section>
+
+      <!-- ======= LISTA DE ARTIGOS ======= -->
+      <section class="bloco-artigos">
+        <h1 class="secao-titulo">Artigos Jurídicos</h1>
+
+        <div id="lista-artigos" class="lista-artigos">
+
+          <!-- Artigo  01-->
+          <article class="artigo">
+            <h3>Aposentadoria por Idade, Tempo de Contribuição e Regras de Transição: o compasso entre o tempo e o
+              direito</h3>
+            <img src="../img/civil.jpg" alt="Aposentadoria por Idade e Regras de Transição" loading="lazy" />
+            <p class="resumo-artigo">
+              O tempo é um rio que nunca cessa de correr. A cada dia, gotas de vida se acumulam e formam um lago chamado
+              aposentadoria — um direito que floresce quando idade e contribuição se encontram.
+            </p>
+            <span class="data-artigo">Publicado em 19/08/2025</span>
+            <a href="artigo01.html" class="btn-leia-mais">Leia mais</a>
+          </article>
+
+          <!-- Artigo  02-->
+          <article class="artigo">
+            <h3>Aposentadoria Especial, Rural e Híbrida: entre a enxada, a cidade e o direito</h3>
+            <img src="../img/civil.jpg" alt="Aposentadoria por Idade e Regras de Transição" loading="lazy" />
+            <p class="resumo-artigo">
+              A vida no campo e na cidade não são mundos separados para a Previdência: elas se unem na chamada
+              aposentadoria híbrida, permitindo somar períodos rurais e urbanos para alcançar o tempo mínimo exigido.
+            </p>
+            <span class="data-artigo">Publicado em 19/08/2025</span>
+            <a href="artigo02.html" class="btn-leia-mais">Leia mais</a>
+          </article>
+
+          <!-- Artigo  03-->
+          <article class="artigo">
+            <h3>Benefícios do INSS: amparo nos diferentes ciclos da vida</h3>
+            <img src="../img/civil.jpg" alt="Aposentadoria por Idade e Regras de Transição" loading="lazy" />
+            <p class="resumo-artigo">
+              A Previdência não é só aposentadoria — é rede de proteção para os momentos de fragilidade, perda ou
+              mudança.
+            </p>
+            <span class="data-artigo">Publicado em 19/08/2025</span>
+            <a href="artigo03.html" class="btn-leia-mais">Leia mais</a>
+          </article>
+
+
+        </div>
+
+        <!-- Paginação -->
+        <div id="paginacao" class="paginacao"></div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- ======= SCRIPT DE BUSCA E PAGINAÇÃO ======= -->
+  <script>
+    (() => {
+      'use strict';
+
+      const input = document.getElementById('campo-pesquisa');
+      const list = document.getElementById('lista-artigos');
+      const pagination = document.getElementById('paginacao');
+      if (!list || !pagination) return;
+
+      const allArticles = Array.from(list.getElementsByClassName('artigo'));
+      const state = { perPage: 9, page: 1, filtered: allArticles };
+
+      const norm = (s) =>
+        (s || '').toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+
+      let emptyEl = document.getElementById('sem-resultados');
+      if (!emptyEl) {
+        emptyEl = document.createElement('p');
+        emptyEl.id = 'sem-resultados';
+        emptyEl.textContent = 'Nenhum artigo encontrado.';
+        emptyEl.style.display = 'none';
+        emptyEl.style.textAlign = 'center';
+        emptyEl.style.color = '#777';
+        emptyEl.style.marginTop = '20px';
+        list.insertAdjacentElement('afterend', emptyEl);
+      }
+
+      function renderPagination() {
+        pagination.innerHTML = '';
+        const totalPages = Math.max(1, Math.ceil(state.filtered.length / state.perPage));
+
+        if (state.page > 1) {
+          const prev = document.createElement('button');
+          prev.innerHTML = '&laquo;';
+          prev.addEventListener('click', () => renderPage(state.page - 1));
+          pagination.appendChild(prev);
+        }
+
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement('button');
+          btn.textContent = i;
+          if (i === state.page) btn.classList.add('ativo');
+          btn.addEventListener('click', () => renderPage(i));
+          pagination.appendChild(btn);
+        }
+
+        if (state.page < totalPages) {
+          const next = document.createElement('button');
+          next.innerHTML = '&raquo;';
+          next.addEventListener('click', () => renderPage(state.page + 1));
+          pagination.appendChild(next);
+        }
+      }
+
+      function renderPage(page) {
+        state.page = page;
+        const start = (page - 1) * state.perPage;
+        const end = start + state.perPage;
+
+        allArticles.forEach(a => a.style.display = 'none');
+        state.filtered.slice(start, end).forEach(a => a.style.display = '');
+
+        emptyEl.style.display = state.filtered.length === 0 ? 'block' : 'none';
+        renderPagination();
+        list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function applyFilter(query) {
+        const q = norm(query);
+        state.filtered = q
+          ? allArticles.filter(a => {
+            const t = norm(a.querySelector('h3')?.textContent);
+            const r = norm(a.querySelector('.resumo-artigo')?.textContent);
+            return (t && t.includes(q)) || (r && r.includes(q));
+          })
+          : allArticles;
+        renderPage(1);
+      }
+
+      let debounceId = 0;
+      if (input) {
+        input.addEventListener('input', e => {
+          clearTimeout(debounceId);
+          debounceId = setTimeout(() => applyFilter(e.target.value), 180);
+        });
+      }
+
+      renderPage(1);
+    })();
+  </script>
+
+  <!-- Scripts globais (chat, swiper etc) -->
+  <script src="../scripts.js" defer></script>
+</body>
+
+</html>
+
+
+<!-- ======= BORDA/DIVISÓRIA + 1º FOOTER ======= -->
+<footer class="site-footer page2-footer">
+  <div class="footer-container container">
+
+    <div class="footer-item">
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      <p><a href="mailto:taisa.abreuadv@gmail.com">taisa.abreuadv@gmail.com</a></p>
+    </div>
+
+    <div class="footer-item">
+      <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+      <address>
+        Rua Olímpio Jacinto, Nº 980, Edifício Santana, 1º Piso<br />
+        Sala 105, Formosa, Goiás, 73802-040
+      </address>
+    </div>
+
+    <div class="footer-item">
+      <i class="fas fa-phone" aria-hidden="true"></i>
+      <p><a href="tel:+5561999230382">(61)99923-0382</a></p>
+    </div>
+  </div>
+
+  <div class="duas-logos">
+    <img src="../img/assinaturaGi.jpg" alt="Logo 1" class="assinatura1" />
+    <img src="../img/assinaturaGe.jpg" alt="Logo 2" class="assinatura2" />
+  </div>
+
+</footer>
+
+<!-- ========== ASSISTENTE VIRTUAL ========== -->
+<div id="chat-floating-message">Olá! Posso te ajudar?</div>
+<div id="chat-icon">💬</div>
+
+<div id="chat-window" class="hidden">
+  <div id="chat-header">
+    <div>
+      <strong>Assistente Virtual</strong><br>
+      <small>● Online</small>
+    </div>
+    <button id="close-chat" type="button">×</button>
+  </div>
+
+  <div id="chat-body">
+    <div class="message bot">Olá! Sou a assistente virtual da Taisa Abreu Advogados. Como posso te
+      ajudar hoje?</div>
+  </div>
+
+  <div id="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Digite sua mensagem..." />
+    <button id="send-btn">Enviar</button>
+  </div>
+</div>
+
+<!-- ========== ABA DE BUSCA E PAGINAÇÃO========== -->
+<script>
+  const campoPesquisa = document.getElementById('campo-pesquisa');
+  const containerArtigos = document.getElementById('lista-artigos');
+  const todosArtigos = Array.from(containerArtigos.getElementsByClassName('artigo'));
+  const paginacao = document.getElementById('paginacao');
+  const artigosPorPagina = 9;
+  let artigosFiltrados = [...todosArtigos];
+  let paginaAtual = 1;
+
+  function mostrarPagina(pagina) {
+    paginaAtual = pagina;
+    const inicio = (pagina - 1) * artigosPorPagina;
+    const fim = inicio + artigosPorPagina;
+
+    todosArtigos.forEach(artigo => artigo.style.display = 'none');
+    artigosFiltrados.slice(inicio, fim).forEach(artigo => artigo.style.display = 'block');
+
+    atualizarPaginacao();
+  }
+
+  function atualizarPaginacao() {
+    paginacao.innerHTML = '';
+
+    const totalPaginas = Math.ceil(artigosFiltrados.length / artigosPorPagina);
+
+    if (paginaAtual > 1) {
+      const setaEsq = document.createElement('button');
+      setaEsq.innerHTML = '&laquo;';
+      setaEsq.onclick = () => mostrarPagina(paginaAtual - 1);
+      paginacao.appendChild(setaEsq);
+    }
+
+    for (let i = 1; i <= totalPaginas; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      if (i === paginaAtual) btn.classList.add('ativo');
+      btn.onclick = () => mostrarPagina(i);
+      paginacao.appendChild(btn);
+    }
+
+    if (paginaAtual < totalPaginas) {
+      const setaDir = document.createElement('button');
+      setaDir.innerHTML = '&raquo;';
+      setaDir.onclick = () => mostrarPagina(paginaAtual + 1);
+      paginacao.appendChild(setaDir);
+    }
+  }
+
+  campoPesquisa.addEventListener('input', () => {
+    const termo = campoPesquisa.value.toLowerCase();
+
+    artigosFiltrados = todosArtigos.filter(artigo => {
+      const titulo = artigo.querySelector('h3').textContent.toLowerCase();
+      const resumo = artigo.querySelector('.resumo-artigo')?.textContent.toLowerCase() || '';
+      return titulo.includes(termo) || resumo.includes(termo);
+    });
+
+    mostrarPagina(1);
+  });
+
+  mostrarPagina(1);
+</script>
+
+
+<script src="scripts.js"></script>
+</body>
+
+</html>
